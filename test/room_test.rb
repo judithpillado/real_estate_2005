@@ -3,6 +3,7 @@ require 'minitest/pride'
 require './lib/room'
 
 class RoomTest < Minitest::Test
+
   def setup
     @room1 = Room.new(:bedroom, 10, '13')
     @room2 = Room.new(:living_room, 15, '12')
@@ -21,7 +22,7 @@ class RoomTest < Minitest::Test
     assert_equal 180, @room2.area
   end
 
-  def test_if_room_is_painted
+  def test_if_it_is_painted
     assert_equal false, @room1.is_painted?
     @room1.paint
     assert_equal true, @room1.is_painted?
